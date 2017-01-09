@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492D2BB51E23F22B0014DEC7 /* GeoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		492D2BB51E23F22B0014DEC7 /* AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		492D2BB81E23F22B0014DEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		492D2BBA1E23F22B0014DEC7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		492D2BBC1E23F22B0014DEC7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		492D2BAC1E23F22A0014DEC7 = {
 			isa = PBXGroup;
 			children = (
-				492D2BB71E23F22B0014DEC7 /* GeoApp */,
+				492D2BB71E23F22B0014DEC7 /* AR */,
 				492D2BB61E23F22B0014DEC7 /* Products */,
 				492D2BCC1E23F4E90014DEC7 /* Frameworks */,
 			);
@@ -52,12 +52,12 @@
 		492D2BB61E23F22B0014DEC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				492D2BB51E23F22B0014DEC7 /* GeoApp.app */,
+				492D2BB51E23F22B0014DEC7 /* AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492D2BB71E23F22B0014DEC7 /* GeoApp */ = {
+		492D2BB71E23F22B0014DEC7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
 				492D2BB81E23F22B0014DEC7 /* AppDelegate.swift */,
@@ -68,7 +68,6 @@
 				492D2BC31E23F22B0014DEC7 /* LaunchScreen.storyboard */,
 				492D2BC61E23F22B0014DEC7 /* Info.plist */,
 			);
-			name = GeoApp;
 			path = AR;
 			sourceTree = "<group>";
 		};
@@ -83,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		492D2BB41E23F22A0014DEC7 /* GeoApp */ = {
+		492D2BB41E23F22A0014DEC7 /* AR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "GeoApp" */;
+			buildConfigurationList = 492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "AR" */;
 			buildPhases = (
 				492D2BB11E23F22A0014DEC7 /* Sources */,
 				492D2BB21E23F22A0014DEC7 /* Frameworks */,
@@ -95,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = GeoApp;
+			name = AR;
 			productName = AR;
-			productReference = 492D2BB51E23F22B0014DEC7 /* GeoApp.app */;
+			productReference = 492D2BB51E23F22B0014DEC7 /* AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "GeoApp" */;
+			buildConfigurationList = 492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "AR" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -130,7 +129,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				492D2BB41E23F22A0014DEC7 /* GeoApp */,
+				492D2BB41E23F22A0014DEC7 /* AR */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +278,7 @@
 				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = AR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.GeoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.AR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -292,7 +291,7 @@
 				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = AR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.GeoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.AR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,7 +300,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "GeoApp" */ = {
+		492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492D2BC71E23F22B0014DEC7 /* Debug */,
@@ -310,13 +309,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "GeoApp" */ = {
+		492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "AR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492D2BCA1E23F22B0014DEC7 /* Debug */,
 				492D2BCB1E23F22B0014DEC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
