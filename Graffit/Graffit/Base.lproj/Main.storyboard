@@ -63,6 +63,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6eW-0j-dIy"/>
+                                    <segue destination="lKO-NF-6s7" kind="show" id="b5M-j1-ihC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,6 +77,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller Main-->
+        <scene sceneID="u2w-TA-ccT">
+            <objects>
+                <viewController id="lKO-NF-6s7" customClass="ViewControllerMain" customModule="Graffit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VvR-AP-Sta"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z9U-B7-NDp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="blD-qg-TR8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-he-ZB5">
+                                <rect key="frame" x="16" y="166" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRU-NP-luw">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem width="102" style="plain" systemItem="fixedSpace" id="ZFK-74-EL5"/>
+                                    <barButtonItem title="Item" id="5Xx-tu-T7K">
+                                        <connections>
+                                            <action selector="post:" destination="lKO-NF-6s7" id="f4g-9C-obl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="postTextField" destination="Nma-he-ZB5" id="t6z-wc-dhu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmk-Rv-K2n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.79999999999995" y="144.3778110944528"/>
         </scene>
     </scenes>
 </document>
