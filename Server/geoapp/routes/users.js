@@ -4,20 +4,22 @@ var mongoose = require('mongoose');
 
 var router = express.Router();
 
-var userSchema = mongoose.Schema({
+var userschema = mongoose.Schema({
 	username: String,
 	hash: String
 });
 
-var user = mongoose.model('user', userSchema);
+var user = mongoose.model('user', userschema);
 
-router.post('/create', function(req, res, next) {
-	user.find({username: req.ody.username}, function(err, users) {
-		//If users is empty then the username was unique
-		res.send(users);
-		/*if (users == []) {
-			console.log("Username was unique");
-			bcrypt.saltGen(10, function(err, salt) {
+router.post('/create', function(req,res,err){
+	console.log('Create user request');
+	user.find({username: req.body.username}, function(err, users) {
+		if(err) console.error(err);
+
+		if(users.length == 0) {
+			console.log("Username  is unique");
+			bcrypt.genSalt(10, function(err, salt) {
+				if(err) console.error(err);
 				bcrypt.hash(req.body.password,
 					salt,
 					function(err, thehash) {
@@ -26,14 +28,15 @@ router.post('/create', function(req, res, next) {
 					user.create({username: req.body.username,
 						hash: thehash},
 						function(err, user) {
-							console.log("User created");
 							if(err) console.error(err);
-							else console.log(user);
-							res.end('User created');
-					});
+							console.log(user);
+							res.end('User ' + req.body.username + " created");
+						});
 				});
 			});
-		}*/
+		} else {
+			res.end();
+		}
 	});
 });
 

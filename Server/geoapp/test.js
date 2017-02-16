@@ -43,8 +43,9 @@ app.post('/users/create', function(req,res,err){
 	//	console.log(r);
 	//});
 	user.find(function(err, users) {
-		if(err) return console.error(err);
-		console.log(users);
+		if(err) console.error(err);
+		//console.log(users);
+		res.end(users.toString());
 	});
 });
 
