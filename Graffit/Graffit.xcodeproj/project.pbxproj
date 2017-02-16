@@ -7,117 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492D2BB91E23F22B0014DEC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492D2BB81E23F22B0014DEC7 /* AppDelegate.swift */; };
-		492D2BBB1E23F22B0014DEC7 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 492D2BBA1E23F22B0014DEC7 /* art.scnassets */; };
-		492D2BBD1E23F22B0014DEC7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492D2BBC1E23F22B0014DEC7 /* GameViewController.swift */; };
-		492D2BC01E23F22B0014DEC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492D2BBE1E23F22B0014DEC7 /* Main.storyboard */; };
-		492D2BC21E23F22B0014DEC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492D2BC11E23F22B0014DEC7 /* Assets.xcassets */; };
-		492D2BC51E23F22B0014DEC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492D2BC31E23F22B0014DEC7 /* LaunchScreen.storyboard */; };
-		492D2BCE1E23F4E90014DEC7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492D2BCD1E23F4E90014DEC7 /* AVFoundation.framework */; };
+		491E83C71E53F87900EC3026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E83C61E53F87900EC3026 /* AppDelegate.swift */; };
+		491E83C91E53F87900EC3026 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E83C81E53F87900EC3026 /* ViewController.swift */; };
+		491E83CC1E53F87900EC3026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491E83CA1E53F87900EC3026 /* Main.storyboard */; };
+		491E83CF1E53F87900EC3026 /* Graffit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 491E83CD1E53F87900EC3026 /* Graffit.xcdatamodeld */; };
+		491E83D11E53F87900EC3026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491E83D01E53F87900EC3026 /* Assets.xcassets */; };
+		491E83D41E53F87900EC3026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491E83D21E53F87900EC3026 /* LaunchScreen.storyboard */; };
+		491E83DD1E5401A900EC3026 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E83DC1E5401A900EC3026 /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		492D2BB51E23F22B0014DEC7 /* GeoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		492D2BB81E23F22B0014DEC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		492D2BBA1E23F22B0014DEC7 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		492D2BBC1E23F22B0014DEC7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		492D2BBF1E23F22B0014DEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		492D2BC11E23F22B0014DEC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		492D2BC41E23F22B0014DEC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		492D2BC61E23F22B0014DEC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		492D2BCD1E23F4E90014DEC7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		491E83C31E53F87900EC3026 /* Graffit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		491E83C61E53F87900EC3026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		491E83C81E53F87900EC3026 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		491E83CB1E53F87900EC3026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		491E83CE1E53F87900EC3026 /* Graffit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Graffit.xcdatamodel; sourceTree = "<group>"; };
+		491E83D01E53F87900EC3026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		491E83D31E53F87900EC3026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		491E83D51E53F87900EC3026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491E83DC1E5401A900EC3026 /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		492D2BB21E23F22A0014DEC7 /* Frameworks */ = {
+		491E83C01E53F87900EC3026 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492D2BCE1E23F4E90014DEC7 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		492D2BAC1E23F22A0014DEC7 = {
+		491E83BA1E53F87900EC3026 = {
 			isa = PBXGroup;
 			children = (
-				492D2BB71E23F22B0014DEC7 /* GeoApp */,
-				492D2BB61E23F22B0014DEC7 /* Products */,
-				492D2BCC1E23F4E90014DEC7 /* Frameworks */,
+				491E83C51E53F87900EC3026 /* Graffit */,
+				491E83C41E53F87900EC3026 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		492D2BB61E23F22B0014DEC7 /* Products */ = {
+		491E83C41E53F87900EC3026 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				492D2BB51E23F22B0014DEC7 /* GeoApp.app */,
+				491E83C31E53F87900EC3026 /* Graffit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492D2BB71E23F22B0014DEC7 /* GeoApp */ = {
+		491E83C51E53F87900EC3026 /* Graffit */ = {
 			isa = PBXGroup;
 			children = (
-				492D2BB81E23F22B0014DEC7 /* AppDelegate.swift */,
-				492D2BBA1E23F22B0014DEC7 /* art.scnassets */,
-				492D2BBC1E23F22B0014DEC7 /* GameViewController.swift */,
-				492D2BBE1E23F22B0014DEC7 /* Main.storyboard */,
-				492D2BC11E23F22B0014DEC7 /* Assets.xcassets */,
-				492D2BC31E23F22B0014DEC7 /* LaunchScreen.storyboard */,
-				492D2BC61E23F22B0014DEC7 /* Info.plist */,
+				491E83C61E53F87900EC3026 /* AppDelegate.swift */,
+				491E83C81E53F87900EC3026 /* ViewController.swift */,
+				491E83CA1E53F87900EC3026 /* Main.storyboard */,
+				491E83D01E53F87900EC3026 /* Assets.xcassets */,
+				491E83D21E53F87900EC3026 /* LaunchScreen.storyboard */,
+				491E83D51E53F87900EC3026 /* Info.plist */,
+				491E83CD1E53F87900EC3026 /* Graffit.xcdatamodeld */,
+				491E83DC1E5401A900EC3026 /* model.swift */,
 			);
-			name = GeoApp;
-			path = AR;
-			sourceTree = "<group>";
-		};
-		492D2BCC1E23F4E90014DEC7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				492D2BCD1E23F4E90014DEC7 /* AVFoundation.framework */,
-			);
-			name = Frameworks;
+			path = Graffit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		492D2BB41E23F22A0014DEC7 /* GeoApp */ = {
+		491E83C21E53F87900EC3026 /* Graffit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "GeoApp" */;
+			buildConfigurationList = 491E83D81E53F87900EC3026 /* Build configuration list for PBXNativeTarget "Graffit" */;
 			buildPhases = (
-				492D2BB11E23F22A0014DEC7 /* Sources */,
-				492D2BB21E23F22A0014DEC7 /* Frameworks */,
-				492D2BB31E23F22A0014DEC7 /* Resources */,
+				491E83BF1E53F87900EC3026 /* Sources */,
+				491E83C01E53F87900EC3026 /* Frameworks */,
+				491E83C11E53F87900EC3026 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GeoApp;
-			productName = AR;
-			productReference = 492D2BB51E23F22B0014DEC7 /* GeoApp.app */;
+			name = Graffit;
+			productName = Graffit;
+			productReference = 491E83C31E53F87900EC3026 /* Graffit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		492D2BAD1E23F22A0014DEC7 /* Project object */ = {
+		491E83BB1E53F87900EC3026 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = zcheshire;
 				TargetAttributes = {
-					492D2BB41E23F22A0014DEC7 = {
+					491E83C21E53F87900EC3026 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = E55286BQ76;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "GeoApp" */;
+			buildConfigurationList = 491E83BE1E53F87900EC3026 /* Build configuration list for PBXProject "Graffit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -125,55 +115,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 492D2BAC1E23F22A0014DEC7;
-			productRefGroup = 492D2BB61E23F22B0014DEC7 /* Products */;
+			mainGroup = 491E83BA1E53F87900EC3026;
+			productRefGroup = 491E83C41E53F87900EC3026 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				492D2BB41E23F22A0014DEC7 /* GeoApp */,
+				491E83C21E53F87900EC3026 /* Graffit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		492D2BB31E23F22A0014DEC7 /* Resources */ = {
+		491E83C11E53F87900EC3026 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492D2BBB1E23F22B0014DEC7 /* art.scnassets in Resources */,
-				492D2BC51E23F22B0014DEC7 /* LaunchScreen.storyboard in Resources */,
-				492D2BC21E23F22B0014DEC7 /* Assets.xcassets in Resources */,
-				492D2BC01E23F22B0014DEC7 /* Main.storyboard in Resources */,
+				491E83D41E53F87900EC3026 /* LaunchScreen.storyboard in Resources */,
+				491E83D11E53F87900EC3026 /* Assets.xcassets in Resources */,
+				491E83CC1E53F87900EC3026 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		492D2BB11E23F22A0014DEC7 /* Sources */ = {
+		491E83BF1E53F87900EC3026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492D2BBD1E23F22B0014DEC7 /* GameViewController.swift in Sources */,
-				492D2BB91E23F22B0014DEC7 /* AppDelegate.swift in Sources */,
+				491E83C91E53F87900EC3026 /* ViewController.swift in Sources */,
+				491E83CF1E53F87900EC3026 /* Graffit.xcdatamodeld in Sources */,
+				491E83C71E53F87900EC3026 /* AppDelegate.swift in Sources */,
+				491E83DD1E5401A900EC3026 /* model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		492D2BBE1E23F22B0014DEC7 /* Main.storyboard */ = {
+		491E83CA1E53F87900EC3026 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				492D2BBF1E23F22B0014DEC7 /* Base */,
+				491E83CB1E53F87900EC3026 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		492D2BC31E23F22B0014DEC7 /* LaunchScreen.storyboard */ = {
+		491E83D21E53F87900EC3026 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				492D2BC41E23F22B0014DEC7 /* Base */,
+				491E83D31E53F87900EC3026 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -181,7 +172,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		492D2BC71E23F22B0014DEC7 /* Debug */ = {
+		491E83D61E53F87900EC3026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		492D2BC81E23F22B0014DEC7 /* Release */ = {
+		491E83D71E53F87900EC3026 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,27 +263,27 @@
 			};
 			name = Release;
 		};
-		492D2BCA1E23F22B0014DEC7 /* Debug */ = {
+		491E83D91E53F87900EC3026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E55286BQ76;
-				INFOPLIST_FILE = AR/Info.plist;
+				INFOPLIST_FILE = Graffit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.GeoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.Graffit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		492D2BCB1E23F22B0014DEC7 /* Release */ = {
+		491E83DA1E53F87900EC3026 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E55286BQ76;
-				INFOPLIST_FILE = AR/Info.plist;
+				INFOPLIST_FILE = Graffit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.GeoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.Graffit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,24 +292,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		492D2BB01E23F22A0014DEC7 /* Build configuration list for PBXProject "GeoApp" */ = {
+		491E83BE1E53F87900EC3026 /* Build configuration list for PBXProject "Graffit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				492D2BC71E23F22B0014DEC7 /* Debug */,
-				492D2BC81E23F22B0014DEC7 /* Release */,
+				491E83D61E53F87900EC3026 /* Debug */,
+				491E83D71E53F87900EC3026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492D2BC91E23F22B0014DEC7 /* Build configuration list for PBXNativeTarget "GeoApp" */ = {
+		491E83D81E53F87900EC3026 /* Build configuration list for PBXNativeTarget "Graffit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				492D2BCA1E23F22B0014DEC7 /* Debug */,
-				492D2BCB1E23F22B0014DEC7 /* Release */,
+				491E83D91E53F87900EC3026 /* Debug */,
+				491E83DA1E53F87900EC3026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		491E83CD1E53F87900EC3026 /* Graffit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				491E83CE1E53F87900EC3026 /* Graffit.xcdatamodel */,
+			);
+			currentVersion = 491E83CE1E53F87900EC3026 /* Graffit.xcdatamodel */;
+			path = Graffit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 492D2BAD1E23F22A0014DEC7 /* Project object */;
+	rootObject = 491E83BB1E53F87900EC3026 /* Project object */;
 }
