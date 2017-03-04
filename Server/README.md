@@ -36,13 +36,13 @@ Creates a new user
 
 -> {username: 'XXX', password: 'YYY'}
 
-<- {token: <A randomly generated integer>}
+<- {token: [A randomly generated integer]}
 
 Login the user and establish a token that can be used to authorize them for routes starting with /authorized
 
 ##/authorized
 
--> Headers.Authorized = <A valid token>
+-> Headers.Authorized = [A valid token]
 
 If the token is linked to a valid user, they are authorized to perform certain actions for that account
 
