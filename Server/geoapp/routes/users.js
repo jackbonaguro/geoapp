@@ -3,7 +3,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var randtoken = require('rand-token');
 
-var user = require('./user.js');
+var schema = require('../src/schema.js');
+var user = schema.user;
+var post = schema.post;
 
 var router = express.Router();
 

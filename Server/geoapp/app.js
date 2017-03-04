@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var posts = require('./routes/posts');
+var index = require('./routes/index.js');
+var users = require('./routes/users.js');
+var authorized= require('./routes/authorized.js');
 
 var app = express();
 var mongoclient = mongo.MongoClient;
@@ -35,9 +35,9 @@ app.use(function(req,res,next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/users', users);
-app.use('/posts', posts);
+app.use('/', index);
+app.use('/user', users);
+app.use('/authorized', authorized);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
