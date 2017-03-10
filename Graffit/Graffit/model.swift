@@ -9,5 +9,5 @@
 import Foundation
 import UIKit
 
-let user:NSMutableDictionary = NSMutableDictionary()
+//let user:NSMutableDictionary = NSMutableDictionary()
 

@@ -8,25 +8,39 @@
 
 import UIKit
 
+let user = User()
+
 class ViewController: UIViewController {
     
     let userJson:NSMutableDictionary = NSMutableDictionary()
-
-    @IBAction func LoginBtn(_ sender: Any) {
-        let user = User()
-        user.login(userName: userNameTextField.text!, password: userNameTextField.text!)
-    }
-    @IBAction func registerBtn(_ sender: Any) {
-            let user = User()
-            user.register(username: userNameTextField.text!, password: passwordTextField.text!)
-            }
-    
-    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
+
+    @IBAction func LoginBtn(_ sender: Any) {
+       // var userLogged: Bool
+       // userLogged =
+            user.login(userName: userNameTextField.text!, password: passwordTextField.text!)
+            performSegue(withIdentifier: "successSegue", sender: self)
+       /* if userLogged {
+            print("it worked")
+        performSegue(withIdentifier: "successSegue", sender: self)
+        } */
+
+    }
+    func goToView() -> Void {
+        performSegue(withIdentifier: "successSegue", sender: self)
+    }
+    @IBAction func registerBtn(_ sender: Any) {
+        
+        user.register(username: userNameTextField.text!, password: passwordTextField.text!)
+        //LoginBtn(Any)
+  
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+            // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
