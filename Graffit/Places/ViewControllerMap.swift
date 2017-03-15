@@ -101,7 +101,7 @@ extension ViewController: CLLocationManagerDelegate {
             let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.region = region
-        let currentLocation = CLLocationCoordinate2D(latitude: 33.7744520523305, longitude:-84.39577914833644)
+        let currentLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude:location.coordinate.longitude)
                 //latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
        // let placesLoader = PlacesLoader()
             print("Before set")

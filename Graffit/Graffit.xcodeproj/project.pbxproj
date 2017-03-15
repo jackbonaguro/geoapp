@@ -33,6 +33,8 @@
 		49A618291E78C09D004DE10D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A618281E78C09D004DE10D /* CoreLocation.framework */; };
 		49A6182B1E78C0B6004DE10D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A6182A1E78C0B6004DE10D /* MapKit.framework */; };
 		49A6182D1E78C0C7004DE10D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A6182C1E78C0C7004DE10D /* CoreMotion.framework */; };
+		49A618311E78E0DD004DE10D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A618301E78E0DD004DE10D /* PostViewController.swift */; };
+		49A618331E78E2D9004DE10D /* PlaceCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A618321E78E2D9004DE10D /* PlaceCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		49A618281E78C09D004DE10D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		49A6182A1E78C0B6004DE10D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		49A6182C1E78C0C7004DE10D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		49A618301E78E0DD004DE10D /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = ../PostViewController.swift; sourceTree = "<group>"; };
+		49A618321E78E2D9004DE10D /* PlaceCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceCreate.swift; path = ../PlaceCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,10 @@
 		49A030B41E736724006BFCF3 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				49A618321E78E2D9004DE10D /* PlaceCreate.swift */,
 				49A030B51E736724006BFCF3 /* AnnotationView.swift */,
 				49A030B61E736724006BFCF3 /* AppDelegate.swift */,
+				49A618301E78E0DD004DE10D /* PostViewController.swift */,
 				49A030B71E736724006BFCF3 /* Assets.xcassets */,
 				49A030B81E736724006BFCF3 /* LaunchScreen.storyboard */,
 				49A030BA1E736724006BFCF3 /* Main.storyboard */,
@@ -249,10 +255,12 @@
 				49A618261E787642004DE10D /* Model.swift in Sources */,
 				49A030E51E736724006BFCF3 /* User.swift in Sources */,
 				49A030E41E736724006BFCF3 /* PlacesLoader.swift in Sources */,
+				49A618311E78E0DD004DE10D /* PostViewController.swift in Sources */,
 				49A030E11E736724006BFCF3 /* LoginViewController.swift in Sources */,
 				49A030DA1E736724006BFCF3 /* ARViewController.swift in Sources */,
 				49A030E31E736724006BFCF3 /* PlaceAnnotation.swift in Sources */,
 				49A030D21E736724006BFCF3 /* AppDelegate.swift in Sources */,
+				49A618331E78E2D9004DE10D /* PlaceCreate.swift in Sources */,
 				49A030D61E736724006BFCF3 /* ARAnnotation.swift in Sources */,
 				49A030DB1E736724006BFCF3 /* DebugMapViewController.swift in Sources */,
 				49A030D71E736724006BFCF3 /* ARAnnotationView.swift in Sources */,
