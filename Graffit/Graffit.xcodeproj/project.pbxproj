@@ -29,6 +29,10 @@
 		49A030E41E736724006BFCF3 /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A030CE1E736724006BFCF3 /* PlacesLoader.swift */; };
 		49A030E51E736724006BFCF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A030CF1E736724006BFCF3 /* User.swift */; };
 		49A030E61E736724006BFCF3 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A030D01E736724006BFCF3 /* ViewControllerMap.swift */; };
+		49A618261E787642004DE10D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A618251E787642004DE10D /* Model.swift */; };
+		49A618291E78C09D004DE10D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A618281E78C09D004DE10D /* CoreLocation.framework */; };
+		49A6182B1E78C0B6004DE10D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A6182A1E78C0B6004DE10D /* MapKit.framework */; };
+		49A6182D1E78C0C7004DE10D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A6182C1E78C0C7004DE10D /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		49A030CE1E736724006BFCF3 /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
 		49A030CF1E736724006BFCF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		49A030D01E736724006BFCF3 /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		49A618251E787642004DE10D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		49A618281E78C09D004DE10D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		49A6182A1E78C0B6004DE10D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		49A6182C1E78C0C7004DE10D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A6182D1E78C0C7004DE10D /* CoreMotion.framework in Frameworks */,
+				49A6182B1E78C0B6004DE10D /* MapKit.framework in Frameworks */,
+				49A618291E78C09D004DE10D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +84,7 @@
 			children = (
 				49A030B41E736724006BFCF3 /* Places */,
 				491E83C41E53F87900EC3026 /* Products */,
+				49A618271E78C09C004DE10D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +112,7 @@
 				49A030CE1E736724006BFCF3 /* PlacesLoader.swift */,
 				49A030CF1E736724006BFCF3 /* User.swift */,
 				49A030D01E736724006BFCF3 /* ViewControllerMap.swift */,
+				49A618251E787642004DE10D /* Model.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -143,6 +156,16 @@
 				49A030C91E736724006BFCF3 /* hdar_close@3x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		49A618271E78C09C004DE10D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A6182C1E78C0C7004DE10D /* CoreMotion.framework */,
+				49A6182A1E78C0B6004DE10D /* MapKit.framework */,
+				49A618281E78C09D004DE10D /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A618261E787642004DE10D /* Model.swift in Sources */,
 				49A030E51E736724006BFCF3 /* User.swift in Sources */,
 				49A030E41E736724006BFCF3 /* PlacesLoader.swift in Sources */,
 				49A030E11E736724006BFCF3 /* LoginViewController.swift in Sources */,

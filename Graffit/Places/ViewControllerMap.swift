@@ -26,15 +26,24 @@ import CoreLocation
 import MapKit
 
 class ViewController: UIViewController {
-  
-  fileprivate var places = [Place]()
-  fileprivate let locationManager = CLLocationManager()
-  @IBOutlet weak var mapView: MKMapView!
-  var arViewController: ARViewController!
-  var startedLoadingPOIs = false
+    fileprivate var places = [Place]()
+    fileprivate let locationManager = CLLocationManager()
+    @IBOutlet weak var mapView: MKMapView!
+    var arViewController: ARViewController!  
+    @IBAction func loadPost(_ sender: Any) {
+        let postArray = model.getPost()
+        for post in postArray {
+            print(post.getText())
+            let annotation = PlaceAnnotation(location: post.getLocation(), text: post.getText())
+            self.mapView.addAnnotation(annotation)
+            
+        }
+    }
+  //var startedLoadingPOIs = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    places = model.getPost()
     
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -66,7 +75,7 @@ class ViewController: UIViewController {
   }
   
   func showInfoView(forPlace place: Place) {
-    let alert = UIAlertController(title: place.placeName , message: place.infoText, preferredStyle: UIAlertControllerStyle.alert)
+    let alert = UIAlertController(title: place.getCreator() , message: place.getText(), preferredStyle: UIAlertControllerStyle.alert)
     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
     
     arViewController.present(alert, animated: true, completion: nil)
@@ -82,39 +91,22 @@ extension ViewController: CLLocationManagerDelegate {
     
     if locations.count > 0 {
       let location = locations.last!
-      if location.horizontalAccuracy < 100 {
         manager.stopUpdatingLocation()
         let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.region = region
+        let currentLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+       // let placesLoader = PlacesLoader()
+       print("Before set")
+        model.setPost(location: currentLocation)
+        print("Before hey")
+       // print("\(postArray[1].getText()) hey")
         
-        if !startedLoadingPOIs {
-          startedLoadingPOIs = true
-          let loader = PlacesLoader()
-          loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
-            if let dict = placesDict {
-              guard let placesArray = dict.object(forKey: "results") as? [NSDictionary]  else { return }
-              
-              for placeDict in placesArray {
-                let latitude = placeDict.value(forKeyPath: "geometry.location.lat") as! CLLocationDegrees
-                let longitude = placeDict.value(forKeyPath: "geometry.location.lng") as! CLLocationDegrees
-                let reference = placeDict.object(forKey: "reference") as! String
-                let name = placeDict.object(forKey: "name") as! String
-                let address = placeDict.object(forKey: "vicinity") as! String
-                
-                let location = CLLocation(latitude: latitude, longitude: longitude)
-                let place = Place(location: location, reference: reference, name: name, address: address)
-                
-                self.places.append(place)
-                let annotation = PlaceAnnotation(location: place.location!.coordinate, title: place.placeName)
-                DispatchQueue.main.async {
-                  self.mapView.addAnnotation(annotation)
-                }
-              }
-            }
-          }
+        DispatchQueue.main.async {
+            
         }
-      }
+            
+        
     }
   }
 }
@@ -133,17 +125,16 @@ extension ViewController: ARDataSource {
 extension ViewController: AnnotationViewDelegate {
   func didTouch(annotationView: AnnotationView) {
     if let annotation = annotationView.annotation as? Place {
-      let placesLoader = PlacesLoader()
-      placesLoader.loadDetailInformation(forPlace: annotation) { resultDict, error in
-        
-        if let infoDict = resultDict?.object(forKey: "result") as? NSDictionary {
-          annotation.phoneNumber = infoDict.object(forKey: "formatted_phone_number") as? String
-          annotation.website = infoDict.object(forKey: "website") as? String
+       // let post = model.getPost()
+     // placesLoader.loadDetailInformation(forPlace: annotation) { resultDict, error in
+
+          //annotation. = post[0].getText()
+          //annotation.website = infoDict.object(forKey: "website") as? String
           
           self.showInfoView(forPlace: annotation)
-        }
+        
       }
+    }
       
     }
-  }
-}
+//}

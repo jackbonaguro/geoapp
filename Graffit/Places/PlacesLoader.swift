@@ -24,72 +24,81 @@ import Foundation
 import CoreLocation
 
 struct PlacesLoader {
-  //let apiURL = "https://maps.googleapis.com/maps/api/place/"
-  //let apiKey = "AIzaSyBDqc-Y371uvAVse5Sgd1FcbysvrC5eVG4"
-  
-  func loadPOIS(location: CLLocation, radius: Int = 30, handler: @escaping (NSDictionary?, NSError?) -> Void) {
-    print("Load pois")
-    let latitude = location.coordinate.latitude
-    let longitude = location.coordinate.longitude
-    
-    let uri = "http://ec2-54-242-147-65.compute-1.amazonaws.com:3333/user/post"
-    
-    let url = URL(string: uri)!
-    let session = URLSession(configuration: URLSessionConfiguration.default)
-    let dataTask = session.dataTask(with: url) { data, response, error in
-      if let error = error {
-        print(error)
-      } else if let httpResponse = response as? HTTPURLResponse {
-        if httpResponse.statusCode == 200 {
-          print(data!)
-          
-          do {
-            let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-            guard let responseDict = responseObject as? NSDictionary else {
-              return
+    //model = model.sharedInstance
+    //let model = Model()
+    func loadPost(location: CLLocationCoordinate2D) -> Void {
+       // let uri = "http://ec2-54-242-147-65.compute-1.amazonaws.com:3333/user/post"
+        
+       // let url = URL(string: uri)!
+        let long = location.longitude
+        let lat = location.latitude
+        let jsonObject: NSMutableDictionary = NSMutableDictionary()
+        jsonObject.setValue(long, forKey: "longitude")
+        jsonObject.setValue(lat, forKey: "latitude")
+        print("Logging in")
+        
+        let jsonData: NSData
+        
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as NSData
+            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue) as! String
+            print("json string = \(jsonString)")
+            print("json data = \(jsonData)")
+            let url = NSURL(string: "http://ec2-54-242-147-65.compute-1.amazonaws.com:3333/posts")!
+            let request = NSMutableURLRequest(url: url as URL)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            print("Before adding jsonData")
+            request.httpBody = jsonData as Data
+            print("After adding jsonData")
+            
+            let session = URLSession.shared
+            
+            request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+            request.httpBody = jsonData as Data
+            let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+                guard let _: Data = data, let _: URLResponse = response, error == nil else {
+                    print("*****error")
+                    return
+                }
+                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+                if let responseDict = json as? [String: Any] {
+                    print("Fuck YOUuuu222 ")
+                    if let dic = responseDict["nearby_posts"] as? NSArray{
+                        print("Fuck YOU3333 ")
+                        for post in dic {
+                            print("Fuck YOU55555 ")
+                            let item1 = post as! NSDictionary
+                            if let id = item1["_id"] as? String {
+                                if let lat = item1["latitude"] as? Double {
+                                    if let long = item1["longitude"] as? Double {
+                                        if let text = item1["text"] as? String {
+                                            if let creator = item1["creator"] as? String {
+                                                let place = Place(id: id, creator: creator,longitude: long, latitude: lat,text: text)
+                                                    model.addPost(place: place)
+                                                print("Fuck YOU ")
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    } else {
+                        print("Error loafing that dic")
+                    }
+                } else {
+                    
+                    print("Error Initializing JSON Data")
+                    
+                }
+               // print(self.userToken)
             }
+            task.resume()
             
-            handler(responseDict, nil)
-      
-          } catch let error as NSError {
-            handler(nil, error)
-          }
+        } catch _ {
+            print ("JSON Failure")
         }
-      }
     }
-    
-    dataTask.resume()
-  }
-  
-  func loadDetailInformation(forPlace: Place, handler: @escaping (NSDictionary?, NSError?) -> Void) {
-    
-    let uri = "http://ec2-54-242-147-65.compute-1.amazonaws.com:3333/user/post"
-    
-    let url = URL(string: uri)!
-    let session = URLSession(configuration: URLSessionConfiguration.default)
-    let dataTask = session.dataTask(with: url) { data, response, error in
-      if let error = error {
-        print(error)
-      } else if let httpResponse = response as? HTTPURLResponse {
-        if httpResponse.statusCode == 200 {
-          print(data!)
-          
-          do {
-            let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-            guard let responseDict = responseObject as? NSDictionary else {
-              return
-            }
-            
-            handler(responseDict, nil)
-            
-          } catch let error as NSError {
-            handler(nil, error)
-          }
-        }
-      }
-    }
-    
-    dataTask.resume()
-
-  }
 }

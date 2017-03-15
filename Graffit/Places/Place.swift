@@ -22,34 +22,36 @@
 
 import Foundation
 import CoreLocation
-
 class Place: ARAnnotation {
-  let _id: String
- // let placeName: String
-  let creator: String
-    let longitude: String
-    let latitude: String
-  var text: String?
-  
-  var infoText: String {
-    get {
-      var info = "User: \(creator) Text: \(text)"
-      
-
-      return info
+   private let id: String
+   private let creator: String
+   private let longitude: Double
+   private let latitude: Double
+   private var text: String?
+   private let locationn: CLLocationCoordinate2D
+    
+    init(id: String, creator: String, longitude: Double, latitude: Double, text: String ) {
+        self.id = id
+        self.creator = creator
+        self.longitude = longitude
+        self.latitude = latitude
+        self.text = text
+        self.locationn = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-  }
+    
+    func getLocation() -> CLLocationCoordinate2D {
+        return self.locationn
+    }
+    func getText() -> String {
+        return self.text!
+    }
+    func getCreator() -> String {
+        return self.creator
+    }
   
-  init(location: CLLocation, reference: String, name: String, address: String) {
-    placeName = name
-    
-    
-    super.init()
-    
-    self.location = location
-  }
+
   
   override var description: String {
-    return placeName
+    return text!
   }
 }

@@ -57,7 +57,7 @@ class AnnotationView: ARAnnotationView {
     self.addSubview(distanceLabel!)
     
     if let annotation = annotation as? Place {
-      titleLabel?.text = annotation.placeName
+      titleLabel?.text = annotation.getText()
       distanceLabel?.text = String(format: "%.2f km", annotation.distanceFromUser / 1000)
       
     }

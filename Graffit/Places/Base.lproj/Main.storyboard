@@ -12,7 +12,7 @@
         <!--Login-->
         <scene sceneID="7wc-fk-Gnd">
             <objects>
-                <viewController title="Login" id="GKT-Nf-OuA" customClass="LoginViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="GKT-Nf-OuA" customClass="LoginViewController" customModule="Graffit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CtW-sc-dt4"/>
                         <viewControllerLayoutGuide type="bottom" id="kbL-YD-mvu"/>
@@ -88,7 +88,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Graffit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -108,6 +108,14 @@
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="showARController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKF-4R-pgg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x83-mD-WeO">
+                                <rect key="frame" x="0.0" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loadPost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTz-az-UVv"/>
                                 </connections>
                             </button>
                         </subviews>
