@@ -1,8 +1,8 @@
-#Server
+# Server
 
-This backend handles user accounts/token-based sessions, posting, etc.
+This backend handles user accounts/token-based sessions, amd storage/retrieval of real-world data.
 
-###/posts
+### /posts
 
 -> {latitude: 0, longitude: 0}
 
@@ -20,11 +20,11 @@ This backend handles user accounts/token-based sessions, posting, etc.
 
 Returns a list of all posts within a rectangle of 1 degree latitude and 1 degree longitude.
 
-##/users
+## /user
 
 Methods relating to accounts, sessions, etc.
 
-###/users/create
+### /user/create
 
 -> {username: 'XXX', password: 'YYY'}
 
@@ -32,7 +32,7 @@ Methods relating to accounts, sessions, etc.
 
 Creates a new user
 
-###/users/login
+### /user/login
 
 -> {username: 'XXX', password: 'YYY'}
 
@@ -40,19 +40,19 @@ Creates a new user
 
 Login the user and establish a token that can be used to authorize them for routes starting with /authorized
 
-##/authorized
+## /authorized
 
--> Headers.Authorized = [A valid token]
+-> Headers.Authorization = [A valid token]
 
 If the token is linked to a valid user, they are authorized to perform certain actions for that account
 
-###/authorized/test
+### /authorized/test
 
 <- {text: 'Hello XXX!'}
 
 To make sure their token is valid
 
-###/authorized/newpost
+### /authorized/newpost
 
 -> {text: 'ABC', longitude: 0, latitude: 0, altitude: 0}
 
