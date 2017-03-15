@@ -25,11 +25,11 @@ import MapKit
 
 class PlaceAnnotation: NSObject, MKAnnotation {
   let coordinate: CLLocationCoordinate2D
-  let title: String?
+  let text: String?
   
-  init(location: CLLocationCoordinate2D, title: String) {
+  init(location: CLLocationCoordinate2D, text: String) {
     self.coordinate = location
-    self.title = title
+    self.text = text
     
     super.init()
   }

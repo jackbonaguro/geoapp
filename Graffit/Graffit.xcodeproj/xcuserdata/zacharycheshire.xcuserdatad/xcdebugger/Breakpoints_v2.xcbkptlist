@@ -122,13 +122,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Places/PlacesLoader.swift"
-            timestampString = "510880016.086658"
+            timestampString = "511211414.432573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "loadPOIS(location:radius:handler:)"
-            landmarkType = "7">
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "PlacesLoader"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Places/HDAugmentedReality/Classes/ARViewController.swift"
+            timestampString = "511234070.34457"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "ARViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graffit.ARViewController.maxDistance.getter : Swift.Double"
+                  moduleName = "Graffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacharycheshire/Desktop/IOS/geoapp/Graffit/Places/HDAugmentedReality/Classes/ARViewController.swift"
+                  timestampString = "511234071.148113"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graffit.ARViewController.maxDistance.setter : Swift.Double"
+                  moduleName = "Graffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacharycheshire/Desktop/IOS/geoapp/Graffit/Places/HDAugmentedReality/Classes/ARViewController.swift"
+                  timestampString = "511234071.150992"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graffit.ARViewController.init () -&gt; Graffit.ARViewController"
+                  moduleName = "Graffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacharycheshire/Desktop/IOS/geoapp/Graffit/Places/HDAugmentedReality/Classes/ARViewController.swift"
+                  timestampString = "511234071.153915"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graffit.ARViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Graffit.ARViewController&gt;"
+                  moduleName = "Graffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacharycheshire/Desktop/IOS/geoapp/Graffit/Places/HDAugmentedReality/Classes/ARViewController.swift"
+                  timestampString = "511234071.155977"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graffit.ARViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Graffit.ARViewController"
+                  moduleName = "Graffit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacharycheshire/Desktop/IOS/geoapp/Graffit/Places/HDAugmentedReality/Classes/ARViewController.swift"
+                  timestampString = "511234071.157339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
