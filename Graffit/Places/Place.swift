@@ -29,6 +29,22 @@ class Place: ARAnnotation {
    private let latitude: Double
    private var text: String?
    private let locationn: CLLocationCoordinate2D
+    private let anoLocation: CLLocation
+    
+    var infoText: String {
+        get {
+            var info = "id: \(id)"
+            
+            if text != nil {
+                info += "\nText: \(text!)"
+            }
+            
+            if creator != nil {
+                info += "\nUser: \(creator)"
+            }
+            return info
+        }
+    }
     
     init(id: String, creator: String, longitude: Double, latitude: Double, text: String ) {
         self.id = id
@@ -37,6 +53,9 @@ class Place: ARAnnotation {
         self.latitude = latitude
         self.text = text
         self.locationn = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.anoLocation = CLLocation(latitude: latitude, longitude: longitude)
+        super.init()
+        self.location = anoLocation
     }
     
     func getLocation() -> CLLocationCoordinate2D {
@@ -52,6 +71,6 @@ class Place: ARAnnotation {
 
   
   override var description: String {
-    return text!
+    return infoText
   }
 }

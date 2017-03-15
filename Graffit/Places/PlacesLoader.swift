@@ -33,8 +33,8 @@ struct PlacesLoader {
         let long = location.longitude
         let lat = location.latitude
         let jsonObject: NSMutableDictionary = NSMutableDictionary()
-        jsonObject.setValue(long, forKey: "longitude")
-        jsonObject.setValue(lat, forKey: "latitude")
+        jsonObject.setValue(long, forKey: "longitude") //hard set
+        jsonObject.setValue(lat, forKey: "latitude") // hard set
         print("Logging in")
         
         let jsonData: NSData
@@ -63,11 +63,8 @@ struct PlacesLoader {
                 }
                 let json = try? JSONSerialization.jsonObject(with: data!, options: [])
                 if let responseDict = json as? [String: Any] {
-                    print("Fuck YOUuuu222 ")
                     if let dic = responseDict["nearby_posts"] as? NSArray{
-                        print("Fuck YOU3333 ")
                         for post in dic {
-                            print("Fuck YOU55555 ")
                             let item1 = post as! NSDictionary
                             if let id = item1["_id"] as? String {
                                 if let lat = item1["latitude"] as? Double {
@@ -76,7 +73,6 @@ struct PlacesLoader {
                                             if let creator = item1["creator"] as? String {
                                                 let place = Place(id: id, creator: creator,longitude: long, latitude: lat,text: text)
                                                     model.addPost(place: place)
-                                                print("Fuck YOU ")
                                                 
                                             }
                                         }

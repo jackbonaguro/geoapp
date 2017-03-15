@@ -26,7 +26,7 @@ import CoreLocation
 import MapKit
 
 class ViewController: UIViewController {
-    fileprivate var places = [Place]()
+    
     fileprivate let locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     var arViewController: ARViewController!  
@@ -35,7 +35,10 @@ class ViewController: UIViewController {
         for post in postArray {
             print(post.getText())
             let annotation = PlaceAnnotation(location: post.getLocation(), text: post.getText())
-            self.mapView.addAnnotation(annotation)
+            DispatchQueue.main.async {
+                self.mapView.addAnnotation(annotation)
+            }
+            //self.mapView.addAnnotation(annotation)
             
         }
     }
@@ -43,7 +46,6 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    places = model.getPost()
     
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -58,6 +60,8 @@ class ViewController: UIViewController {
   }
   
   @IBAction func showARController(_ sender: Any) {
+    //fileprivate
+    var places = model.getPost()
     arViewController = ARViewController()
     arViewController.dataSource = self
     arViewController.maxDistance = 0
@@ -90,23 +94,22 @@ extension ViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     
     if locations.count > 0 {
-      let location = locations.last!
-        manager.stopUpdatingLocation()
-        let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.region = region
-        let currentLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let location = locations.last!
+       // if location.horizontalAccuracy < 10 {
+           //let location = locations.last!
+            manager.stopUpdatingLocation()
+            let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.region = region
+        let currentLocation = CLLocationCoordinate2D(latitude: 33.7744520523305, longitude:-84.39577914833644)
+                //latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
        // let placesLoader = PlacesLoader()
-       print("Before set")
-        model.setPost(location: currentLocation)
-        print("Before hey")
+            print("Before set")
+            model.setPost(location: currentLocation)
+            print("Before hey")
        // print("\(postArray[1].getText()) hey")
-        
-        DispatchQueue.main.async {
             
-        }
-            
-        
+       //}
     }
   }
 }

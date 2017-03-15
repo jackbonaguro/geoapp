@@ -310,11 +310,14 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
     open func setAnnotations(_ annotations: [ARAnnotation])
     {
         var validAnnotations: [ARAnnotation] = []
+         print("Annotation accces1")
         // Don't use annotations without valid location
         for annotation in annotations
         {
+            print("Annotation accces")
             if annotation.location != nil && CLLocationCoordinate2DIsValid(annotation.location!.coordinate)
             {
+                 print(annotation.location?.coordinate)
                 validAnnotations.append(annotation)
             }
         }
