@@ -36,7 +36,7 @@ class Model: NSObject {
         return postArray
     }
     func setPost(location: CLLocationCoordinate2D) -> Void {
-        //postArray.removeAll()
+        postArray.removeAll()
         let placesLoader = PlacesLoader()
         placesLoader.loadPost(location: location)
         

@@ -15,7 +15,7 @@ class PlaceCreate {
         let jsonObject: NSMutableDictionary = NSMutableDictionary()
         jsonObject.setValue(long, forKey: "longitude") //hard set
         jsonObject.setValue(lat, forKey: "latitude")
-        jsonObject.setValue(9098, forKey: "altitude")
+        jsonObject.setValue(0, forKey: "altitude")
         jsonObject.setValue(textt, forKey: "text")// hard set
         print("Creatin Post")
         
