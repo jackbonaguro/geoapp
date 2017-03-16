@@ -15,7 +15,7 @@ class PlaceCreate {
         let jsonObject: NSMutableDictionary = NSMutableDictionary()
         jsonObject.setValue(long, forKey: "longitude") //hard set
         jsonObject.setValue(lat, forKey: "latitude")
-        jsonObject.setValue(textt, forKey: "altitude")
+        jsonObject.setValue(9098, forKey: "altitude")
         jsonObject.setValue(textt, forKey: "text")// hard set
         print("Creatin Post")
         
@@ -48,8 +48,8 @@ class PlaceCreate {
                     if let text = responseDict["text"] as? String {
                         print(text)
                         print("What")
-                        let place = Place(id: model.getCurrentUser().userToken, creator: model.getCurrentUser().currentUserName,longitude: long,latitude: lat,text: textt) 
-                        model.addPost(place: place)
+                       /* let place = Place(id: model.getCurrentUser().userToken, creator: model.getCurrentUser().currentUserName,longitude: long,latitude: lat,text: textt)
+                        model.addPost(place: place)*/
                         
                     } else {
                         
