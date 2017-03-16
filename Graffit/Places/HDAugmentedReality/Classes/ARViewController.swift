@@ -317,7 +317,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
             print("Annotation accces")
             if annotation.location != nil && CLLocationCoordinate2DIsValid(annotation.location!.coordinate)
             {
-                 print(annotation.location?.coordinate)
+                 print(annotation.location?.coordinate as Any)
                 validAnnotations.append(annotation)
             }
         }

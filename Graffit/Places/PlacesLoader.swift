@@ -41,7 +41,7 @@ struct PlacesLoader {
         
         do {
             jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as NSData
-            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue) as! String
+           // let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue) as! String
            // print("json string = \(jsonString)")
           //  print("json data = \(jsonData)")
             let url = NSURL(string: "http://ec2-54-242-147-65.compute-1.amazonaws.com:3333/posts")!

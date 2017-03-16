@@ -61,7 +61,7 @@ class ViewController: UIViewController {
   
   @IBAction func showARController(_ sender: Any) {
     //fileprivate
-    var places = model.getPost()
+    let places = model.getPost()
     arViewController = ARViewController()
     arViewController.dataSource = self
     arViewController.maxDistance = 0

@@ -23,7 +23,7 @@ class postViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var postTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(postViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         locationManager.delegate = self

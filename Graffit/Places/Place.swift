@@ -38,10 +38,7 @@ class Place: ARAnnotation {
             if text != nil {
                 info += "\nText: \(text!)"
             }
-            
-            if creator != nil {
                 info += "\nUser: \(creator)"
-            }
             return info
         }
     }

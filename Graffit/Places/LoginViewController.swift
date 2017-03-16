@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
     view.addGestureRecognizer(tap)
     // Do any additional setup after loading the view, typically from a nib.
   }
